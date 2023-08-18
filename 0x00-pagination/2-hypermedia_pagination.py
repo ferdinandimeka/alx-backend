@@ -9,9 +9,7 @@ from typing import Dict, List
 index_range = __import__('0-simple_helper_function').index_range
 
 
-
-
-class Server: 
+class Server:
 
     """Server class to paginate a database of popular baby names.
     """
@@ -38,9 +36,9 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
         self.dataset()
         start, end = index_range(page, page_size)
-        return self.__dataset[start:end]   
-    
-    def get_hyper(self, page: int=1, page_size: int=10) -> Dict:
+        return self.__dataset[start:end]
+
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """Returns a dictionary containing the following key-value pairs
         """
         page_data = self.get_page(page, page_size)
