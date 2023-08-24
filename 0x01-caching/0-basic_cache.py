@@ -9,7 +9,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 class BasicCache(BaseCaching):
     """ BasicCache defines:
       - Inherits from BaseCaching
-      - Caching system
+      - Caching system.
     """
 
     def put(self, key, item):
