@@ -14,9 +14,7 @@ const INITIAL_SEATS_COUNT = 50;
 const app = express();
 const PORT = 1245;
 
-const reserveSeat = async (number) => {
-  return promisify(client.SET).bind(client)('available_seats', number);
-};
+const reserveSeat = async (number) => promisify(client.SET).bind(client)('available_seats', number);
 
 const getCurrentAvailableSeats = async () => {
   const getAsync = promisify(client.get).bind(client);
